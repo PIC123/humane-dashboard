@@ -33,7 +33,7 @@ import {
   useTrendAlerts, 
   useGapDiscoveries,
   useConnectionInsights 
-} from '../shared/WebSocketProvider-production';
+} from '../shared/WebSocketProvider';
 
 interface IntelligenceFeedProps {
   summary: any;

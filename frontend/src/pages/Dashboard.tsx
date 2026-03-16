@@ -24,7 +24,7 @@ import {
 } from '@mui/icons-material';
 
 import { api } from '../services/api-production';
-import { useWebSocket, useIntelligenceUpdates } from '../components/shared/WebSocketProvider-production';
+import { useWebSocket, useIntelligenceUpdates } from '../components/shared/WebSocketProvider';
 import { NetworkVisualization } from '../components/visualization/NetworkVisualization';
 import { KPICards } from '../components/dashboard/KPICards';
 import { TrendChart } from '../components/dashboard/TrendChart';

@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 
 // Components
 import { Layout } from './components/shared/Layout';
-import { WebSocketProvider } from './components/shared/WebSocketProvider-production';
+import { WebSocketProvider } from './components/shared/WebSocketProvider';
 
 // Pages
 import { Dashboard } from './pages/Dashboard';
