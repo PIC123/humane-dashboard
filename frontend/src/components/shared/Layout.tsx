@@ -23,7 +23,7 @@ import {
   WifiOff as DisconnectedIcon
 } from '@mui/icons-material';
 
-import { useWebSocket } from './WebSocketProvider';
+import { useWebSocket } from './WebSocketProvider-production';
 
 interface LayoutProps {
   children: React.ReactNode;
