@@ -13,7 +13,7 @@ import {
   Alert
 } from '@mui/material';
 
-import { api } from '../services/api';
+import { api } from '../services/api-production';
 import { NetworkVisualization } from '../components/visualization/NetworkVisualization';
 
 export const IntelligenceAnalysis: React.FC = () => {

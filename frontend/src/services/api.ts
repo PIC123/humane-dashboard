@@ -5,10 +5,20 @@
 
 import axios from 'axios';
 
-// API Configuration - Updated for Vercel deployment
+// Conditional API import - Use mock data in production
+import mockApi from './api-mock';
+
+// API Configuration  
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/api' 
+  ? 'mock' // Use mock data for now
   : 'http://localhost:8000/api/v1';
+
+// Use mock API in production
+if (process.env.NODE_ENV === 'production') {
+  // Re-export mock API for production
+  const { api: mockApiExport } = mockApi;
+  module.exports = mockApiExport;
+}
 
 // Create axios instance with default config
 const apiClient = axios.create({

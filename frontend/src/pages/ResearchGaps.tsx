@@ -13,7 +13,7 @@ import {
   Alert
 } from '@mui/material';
 
-import { api } from '../services/api';
+import { api } from '../services/api-production';
 import { ResearchGapsPanel } from '../components/dashboard/ResearchGapsPanel';
 
 export const ResearchGaps: React.FC = () => {

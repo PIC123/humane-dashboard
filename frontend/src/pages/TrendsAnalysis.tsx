@@ -13,7 +13,7 @@ import {
   Alert
 } from '@mui/material';
 
-import { api } from '../services/api';
+import { api } from '../services/api-production';
 import { TrendChart } from '../components/dashboard/TrendChart';
 
 export const TrendsAnalysis: React.FC = () => {
