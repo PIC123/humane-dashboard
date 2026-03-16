@@ -5,9 +5,9 @@
 
 import axios from 'axios';
 
-// API Configuration
+// API Configuration - Updated for Vercel deployment
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/api/v1' 
+  ? '/api' 
   : 'http://localhost:8000/api/v1';
 
 // Create axios instance with default config
