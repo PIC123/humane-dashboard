@@ -158,7 +158,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             </Typography>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };
