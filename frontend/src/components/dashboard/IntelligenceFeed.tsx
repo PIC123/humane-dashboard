@@ -13,8 +13,7 @@ import {
   Chip,
   Divider,
   Alert,
-  Fade,
-  CircularProgress
+  Fade
 } from '@mui/material';
 import {
   Psychology,
@@ -55,7 +54,6 @@ export const IntelligenceFeed: React.FC<IntelligenceFeedProps> = ({
   connected
 }) => {
   const [feedItems, setFeedItems] = useState<FeedItem[]>([]);
-  const [loading, setLoading] = useState(false);
   
   const { lastMessage } = useWebSocket();
 
@@ -206,15 +204,7 @@ export const IntelligenceFeed: React.FC<IntelligenceFeedProps> = ({
         )}
       </Box>
 
-      {/* Loading State */}
-      {loading && (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
-          <CircularProgress size={16} />
-          <Typography variant="caption" color="text.secondary">
-            Processing intelligence updates...
-          </Typography>
-        </Box>
-      )}
+
 
       {/* Feed Items */}
       <Box sx={{ flex: 1, overflowY: 'auto' }}>

@@ -20,19 +20,13 @@ export const IntelligenceAnalysis: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [networkData, setNetworkData] = useState<any>(null);
-  const [intelligenceData, setIntelligenceData] = useState<any>(null);
 
   useEffect(() => {
     const loadData = async () => {
       try {
         setLoading(true);
-        const [network, intelligence] = await Promise.all([
-          api.intelligence.getNetworkGraph(0.5), // Lower threshold for more connections
-          api.intelligence.getConnections({ min_strategic_value: 0.5 })
-        ]);
-        
+        const network = await api.intelligence.getNetworkGraph(0.5); // Lower threshold for more connections
         setNetworkData(network);
-        setIntelligenceData(intelligence);
       } catch (err: any) {
         setError(err.message);
       } finally {

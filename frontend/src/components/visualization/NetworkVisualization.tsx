@@ -29,7 +29,6 @@ export const NetworkVisualization: React.FC<NetworkVisualizationProps> = ({
 
     // Create simple circles to represent nodes
     const nodes = data.nodes || [];
-    const links = data.links || [];
 
     // Add circles for nodes
     nodes.slice(0, 10).forEach((node: any, i: number) => {

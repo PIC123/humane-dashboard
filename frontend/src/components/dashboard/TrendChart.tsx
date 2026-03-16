@@ -11,8 +11,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  Cell
+  Legend
 } from 'recharts';
 import { Box, Typography, Chip } from '@mui/material';
 import { TrendPattern } from '../../services/api';

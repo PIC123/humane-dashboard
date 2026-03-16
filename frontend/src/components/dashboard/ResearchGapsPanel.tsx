@@ -8,7 +8,6 @@ import {
   Typography,
   List,
   ListItem,
-  ListItemText,
   Chip,
   LinearProgress,
   IconButton,
