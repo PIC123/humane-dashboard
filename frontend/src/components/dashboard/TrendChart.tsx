@@ -181,7 +181,7 @@ export const TrendChart: React.FC<TrendChartProps> = ({ trends, height }) => {
             dataKey="confidence"
             name="Confidence"
             domain={[0, 100]}
-            tickFormatter={(value) => `${value}%`}
+            tickFormatter={(value: any) => `${value}%`}
             stroke="#999"
           />
           <YAxis
@@ -189,7 +189,7 @@ export const TrendChart: React.FC<TrendChartProps> = ({ trends, height }) => {
             dataKey="momentum"
             name="Momentum"
             domain={[0.5, 4.5]}
-            tickFormatter={(value) => {
+            tickFormatter={(value: any) => {
               const labels = { 1: 'Declining', 2: 'Stable', 3: 'Growing', 4: 'Emerging' };
               return labels[value as keyof typeof labels] || '';
             }}
