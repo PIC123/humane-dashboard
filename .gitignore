@@ -1,0 +1,96 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+backend/app/logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# Build directories
+backend/build/
+backend/dist/
+frontend/build/
+frontend/dist/
+
+# Environment variables (important - don't commit secrets!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Intelligence data (optional - these might be large)
+# Uncomment if you don't want to commit the intelligence JSON files
+# connections_graph.json
+# research_gaps_opportunities.json
+# trend_patterns.json
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Package files
+*.tgz
+*.tar.gz
+
+# Runtime files
+*.pid
+*.lock
+
+# Editor backups
+*~
+*.bak
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

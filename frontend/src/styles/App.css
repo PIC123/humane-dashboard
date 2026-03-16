@@ -1,0 +1,224 @@
+/* Research Intelligence Dashboard - Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Network visualization custom styles */
+.network-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1000;
+  max-width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Force-directed graph styles */
+.network-node {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.network-node:hover {
+  stroke-width: 3px !important;
+}
+
+.network-link {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.network-link:hover {
+  stroke-opacity: 1 !important;
+}
+
+/* Chart container styles */
+.chart-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #333;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Fade in animation for new content */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Glow effects for important elements */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(31, 119, 180, 0.3);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px rgba(255, 127, 14, 0.3);
+}
+
+.glow-success {
+  box-shadow: 0 0 20px rgba(44, 160, 44, 0.3);
+}
+
+/* Custom card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Intelligence feed animations */
+.feed-item-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.feed-item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.feed-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.feed-item-exit-active {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .network-visualization {
+    height: 400px !important;
+  }
+  
+  .chart-container {
+    padding: 8px;
+  }
+  
+  .dashboard-card {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .network-visualization {
+    height: 300px !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .network-link {
+    stroke: #ffffff !important;
+    stroke-opacity: 0.8 !important;
+  }
+  
+  .network-node {
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .loading-pulse,
+  .fade-in,
+  .feed-item-enter-active,
+  .feed-item-exit-active {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .network-visualization,
+  .chart-container {
+    background: white !important;
+    border: 1px solid black !important;
+  }
+  
+  .MuiCard-root {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+}
