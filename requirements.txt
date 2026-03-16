@@ -1,2 +1,0 @@
-# Vercel Python Functions Dependencies
-# Keep this minimal for faster cold starts
